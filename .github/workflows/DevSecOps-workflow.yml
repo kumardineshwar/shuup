@@ -30,7 +30,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: DevSkim-artifact
-          path: ${{ github.workspace }}/**/*.html
+          path: ${{ github.workspace }}/**/devskim-results*
 
   Secrets_Scan:
     name: SecretsScan-GitGuardian
@@ -84,7 +84,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
           name: depcheck-artifact
-          path: ${{ github.workspace }}/**/*.html
+          path: ${{ github.workspace }}/dependency-check-report.html
            
 
 
