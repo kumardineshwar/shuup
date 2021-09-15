@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shuup
+spec:
+  selector:
+    matchLabels:
+      run: shuup
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: shuup
+    spec:
+      containers:
+      - name: shuup
+        image: gcr.io/PROJECT_ID/IMAGE:TAG
+        ports:
+        - containerPort: 80
