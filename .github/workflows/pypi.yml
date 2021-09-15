@@ -12,8 +12,8 @@ jobs:
     steps:
       - name: "Checkout code"
         uses: actions/checkout@v2
-        with:
-          ref: 'v${{ github.event.inputs.version }}'
+#        with:
+#          ref: 'v${{ github.event.inputs.version }}'
 
       - name: "Set up Python"
         uses: actions/setup-python@v2
@@ -38,8 +38,8 @@ jobs:
           rm -rf dist/
           python setup.py bdist_wheel
 
-      - name: "Upload the wheel to PYPI"
-        uses: pypa/gh-action-pypi-publish@release/v1
-        with:
-          user: __token__
-          password: ${{ secrets.PYPI_API_TOKEN }}
+#      - name: "Upload the wheel to PYPI"
+#        uses: pypa/gh-action-pypi-publish@release/v1
+#        with:
+#          user: __token__
+#          password: ${{ secrets.PYPI_API_TOKEN }}
