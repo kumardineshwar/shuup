@@ -4,7 +4,6 @@ from selenium.webdriver.firefox.options import Options
 import pytest
 
 
-#target_url = "${{ secrets.EXT_IP }}/install"
 target_url = "http://34.88.219.177/"
 
 print("########## Running the Selenium Script ##########")
@@ -26,9 +25,3 @@ def test_data():
     element = driver.find_element_by_tag_name("h1")
     print("########## Checking for Shuup main page ##########")
     assert element.text == "Welcome to Default Shop!"
-
-#@pytest.mark.usefixtures("get_driver")
-#def test_body():
-#    element = driver.find_element_by_xpath('//*[@id="mainMenu"]/form/a[1]')
-#    print("########## Checking for Login Button ##########")
-#    assert element.text == "Log in"
