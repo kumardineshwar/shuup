@@ -143,7 +143,7 @@ jobs:
     name: Build-Push-Image-Docker
     runs-on: ubuntu-latest
     needs:
-      - SAST_Scan-NodeJs    
+      - Scan-Build
     steps:
       - name: Checkout
         uses: actions/checkout@v2
