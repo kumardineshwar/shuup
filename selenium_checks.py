@@ -9,6 +9,7 @@ target_url = "http://34.88.219.177/"
 
 print("########## Running the Selenium Script ##########")
 
+
 @pytest.fixture(scope="session")
 def get_driver():
     global driver
@@ -17,6 +18,7 @@ def get_driver():
     driver = webdriver.Firefox(options=options)
     yield
     driver.close()
+
 
 @pytest.mark.usefixtures("get_driver")
 def test_data():
@@ -30,4 +32,3 @@ def test_data():
 #    element = driver.find_element_by_xpath('//*[@id="mainMenu"]/form/a[1]')
 #    print("########## Checking for Login Button ##########")
 #    assert element.text == "Log in"
-
