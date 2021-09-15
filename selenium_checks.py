@@ -21,9 +21,9 @@ def get_driver():
 @pytest.mark.usefixtures("get_driver")
 def test_data():
     driver.get(target_url)
-    element = driver.find_element_by_tag_name("h2")
+    element = driver.find_element_by_tag_name("h1")
     print("########## Checking for Shuup main page ##########")
-    assert element.text == "Search for products"
+    assert element.text == "Welcome to Default Shop!"
 
 #@pytest.mark.usefixtures("get_driver")
 #def test_body():
