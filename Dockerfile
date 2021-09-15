@@ -10,7 +10,7 @@ RUN apt-get update \
         python3-dev \
         python3-pil \
         python3-pip \
-    && pip install --upgrade pip && rm -rf /var/lib/apt/lists/ /var/cache/apt/ 
+    && pip3 install --upgrade pip && rm -rf /var/lib/apt/lists/ /var/cache/apt/ 
 
 # These invalidate the cache every single time but
 # there really isn't any other obvious way to do this.
