@@ -1,11 +1,8 @@
 name: "PYPI"
 
 on:
-  workflow_dispatch:
-    inputs:
-      version:
-        description: "Version of the release, e.g. 1.0.0"
-        required: true
+  workflow_dispatch: null
+  
 
 jobs:
   build:
