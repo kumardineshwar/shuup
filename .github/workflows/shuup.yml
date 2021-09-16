@@ -39,7 +39,7 @@ jobs:
       SHUUP_TESTS_CI: 1
     strategy:
       matrix:
-        python-version: ['3.6', '3.7', '3.8']
+        python-version: ['3.6', '3.7']
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python
@@ -103,7 +103,8 @@ jobs:
       run: mkdir .unit_tests
 
     - name: Run tests
-      run: py.test -v --nomigrations shuup_tests/browser/front shuup_tests/browser/admin --splinter-headless --splinter-screenshot-dir=.unit_tests/
+#      run: py.test -v --nomigrations shuup_tests/browser/front shuup_tests/browser/admin --splinter-headless --splinter-screenshot-dir=.unit_tests/
+      run: py.test -v --nomigrations shuup_tests/browser/front --splinter-headless --splinter-screenshot-dir=.unit_tests/
 
     - uses: actions/upload-artifact@v2
       if: failure()
