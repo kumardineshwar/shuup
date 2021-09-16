@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 
+import pytest
+
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 
-import pytest
+
 
 
 target_url = "http://34.88.219.177/"
