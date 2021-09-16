@@ -18,7 +18,7 @@ from shuup.testing.browser_utils import (
 from shuup.testing.factories import get_default_shop
 from shuup.utils.django_compat import reverse
 
-pytestmark = pytest.mark.skipif(os.environ.get("SHUUP_BROWSER_TESTS", "0") != "1", reason="No browser tests run.")
+pytestmark = pytest.mark.skipif(os.environ.get("SHUUP_BROWSER_TESTS", "0") == "1", reason="No browser tests run.")
 
 
 @pytest.mark.django_db
@@ -30,7 +30,7 @@ def test_gdpr_consent(browser, live_server, settings):
     shop_gdpr = GDPRSettings.get_for_shop(shop)
     shop_gdpr.cookie_banner_content = "my cookie banner content"
     shop_gdpr.cookie_privacy_excerpt = "my cookie privacyexcerpt"
-    shop_gdpr.enabled = False
+    shop_gdpr.enabled = True
     shop_gdpr.save()  # Enable GDPR
 
     browser = initialize_front_browser_test(browser, live_server)
