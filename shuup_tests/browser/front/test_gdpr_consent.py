@@ -30,7 +30,7 @@ def test_gdpr_consent(browser, live_server, settings):
     shop_gdpr = GDPRSettings.get_for_shop(shop)
     shop_gdpr.cookie_banner_content = "my cookie banner content"
     shop_gdpr.cookie_privacy_excerpt = "my cookie privacyexcerpt"
-    shop_gdpr.enabled = True
+    shop_gdpr.enabled = False
     shop_gdpr.save()  # Enable GDPR
 
     browser = initialize_front_browser_test(browser, live_server)
