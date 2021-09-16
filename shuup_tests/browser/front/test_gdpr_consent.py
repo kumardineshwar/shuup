@@ -18,7 +18,7 @@ from shuup.testing.browser_utils import (
 from shuup.testing.factories import get_default_shop
 from shuup.utils.django_compat import reverse
 
-pytestmark = pytest.mark.skipif(os.environ.get("SHUUP_BROWSER_TESTS", "0") == "1", reason="No browser tests run.")
+pytestmark = pytest.mark.skipif(os.environ.get("SHUUP_BROWSER_TESTS", "0") != "1", reason="No browser tests run.")
 
 
 @pytest.mark.django_db

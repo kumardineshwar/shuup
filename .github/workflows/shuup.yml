@@ -71,7 +71,7 @@ jobs:
     name: "Test Shuup with browser"
     runs-on: ubuntu-latest
     env:
-      SHUUP_BROWSER_TESTS: 1
+      SHUUP_BROWSER_TESTS: 0
       SHUUP_TESTS_CI: 1
     strategy:
       matrix:
