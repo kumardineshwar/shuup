@@ -1,11 +1,5 @@
-name: DAST
+name: Manual DAST Scan
 'on':
-  push:
-    branches:
-      - developer
-  pull_request:
-    branches:
-      - developer
   workflow_dispatch: null
   
 jobs:
