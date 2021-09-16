@@ -18,7 +18,7 @@ https://shuup.com/
 
 Copyright
 ---------
-
+##
 Copyright (c) 2012-2021 by Shuup Commerce Inc. <support@shuup.com>
 
 Shuup is International Registered Trademark & Property of Shuup Commerce Inc.,
